@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>R&amp;S</title>
+    <meta name="discription" content="discription">
+    <meta name="theme-color" content="#c9e0e04d">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+    <main>
+      <form class="plan-form" id="formElem" method="post" action="https://echo.htmlacademy.ru">
+        <ul class="plan-list">
+          <li class="plan-list__item">
+            <label class="plan-list__label plan-list__label--active" data-plan="#1" tabindex="1">License plan#1
+              <input class="plan-list__input" type="radio" name="plan" value="$13 per license" checked="checked"/><span class="plan-list__price" data-price="13">$13 per license</span>
+            </label>
+          </li>
+          <li class="plan-list__item">
+            <label class="plan-list__label" data-plan="#2" tabindex="1">License plan#2
+              <input class="plan-list__input" type="radio" name="plan" value="$22 per license"/><span class="plan-list__price" data-price="22">$22 per license</span>
+            </label>
+          </li>
+          <li class="plan-list__item">
+            <label class="plan-list__label" data-plan="#3" tabindex="1">License plan#3
+              <input class="plan-list__input" type="radio" name="plan" value="$34 per license"/><span class="plan-list__price" data-price="34">$34 per license</span>
+            </label>
+          </li>
+        </ul>
+        <div class="count-license">
+          <label class="count-license__label">Number of licenses :
+            <select class="count-license__select" name="number of licenses" id="select">
+              <option value="5">5</option>
+              <option value="10" selected="selected">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+            </select>
+          </label>
+        </div>
+        <div class="total-price"><span class="total-price__text">Total</span><span class="total-price__number">$340</span></div>
+        <button class="btn plan-form__btn" type="submit">Buy now</button>
+        <div class="select-plan"><span class="select-plan__text">Selected plan:</span><span class="select-plan__num">#1</span></div>
+      </form>
+      <div class="table">
+        <table>
+          <tr>
+            <th class="th-col">Показатель</th>
+            <th class="th-col th-col--small th-col--bg-blue">Текущий день</th>
+            <th class="th-col">Вчера</th>
+            <th class="th-col">Этот день <br/> неделю назад</th>
+          </tr>
+          <tr>
+            <td class="td-col td-col--1 td-col--text-left">Выручка, руб</td>
+            <td class="td-col td-col--small td-col--bg-blue">500521</td>
+            <td class="td-col td-col--float"><span class="td-col__number">480521</span><span class="td-col__per td-col__per--red">-4%</span></td>
+            <td class="td-col td-col--float"><span class="td-col__number">480521</span><span class="td-col__per td-col__per--red">-4%</span></td>
+          </tr>
+          <tr>
+            <td class="td-col td-col--graf" colspan="4">
+              <div id="grafik"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="td-col td-col--1">Наличные</td>
+            <td class="td-col td-col--small td-col--bg-blue">300000</td>
+            <td class="td-col td-col--float"><span class="td-col__number">300000</span><span class="td-col__per td-col__per--red">-3%</span></td>
+            <td class="td-col td-col--float"><span class="td-col__number">300000</span><span class="td-col__per td-col__per--red">-3%</span></td>
+          </tr>
+          <tr>
+            <td class="td-col td-col--1">Безналичный расчёт</td>
+            <td class="td-col td-col--small td-col--bg-blue">100000</td>
+            <td class="td-col td-col--float"><span class="td-col__number">100000</span><span class="td-col__per td-col__per--red">-3%</span></td>
+            <td class="td-col td-col--float"><span class="td-col__number">100000</span><span class="td-col__per td-col__per--red">-3%</span></td>
+          </tr>
+          <tr>
+            <td class="td-col td-col--1">Кредитные карты</td>
+            <td class="td-col td-col--small td-col--bg-blue">100521</td>
+            <td class="td-col td-col--float"><span class="td-col__number">100521</span><span class="td-col__per td-col__per--red">-3%</span></td>
+            <td class="td-col td-col--float"><span class="td-col__number">100521</span><span class="td-col__per td-col__per--red">-3%</span></td>
+          </tr>
+          <tr>
+            <td class="td-col td-col--1 td-col--text-left">Средний чек, руб</td>
+            <td class="td-col td-col--small td-col--bg-blue">1300</td>
+            <td class="td-col td-col--bg-green td-col--float"><span class="td-col__number">900</span><span class="td-col__per td-col__per--green">+44%</span></td>
+            <td class="td-col td-col--bg-green td-col--float"><span class="td-col__number">800</span><span class="td-col__per td-col__per--green">+54%</span></td>
+          </tr>
+          <tr>
+            <td class="td-col td-col--1 td-col--text-left">Средний гость, руб</td>
+            <td class="td-col td-col--small td-col--bg-blue">1200</td>
+            <td class="td-col td-col--bg-green td-col--float"><span class="td-col__number">800</span><span class="td-col__per td-col__per--green">+45%</span></td>
+            <td class="td-col td-col--bg-green td-col--float"><span class="td-col__number">800</span><span class="td-col__per td-col__per--green">+45%</span></td>
+          </tr>
+          <tr>
+            <td class="td-col td-col--1 td-col--text-left">Удаления из чека (после оплаты), руб</td>
+            <td class="td-col td-col--small td-col--bg-blue">1000</td>
+            <td class="td-col td-col--bg-red td-col--float"><span class="td-col__number">1100</span><span class="td-col__per td-col__per--red">-10%</span></td>
+            <td class="td-col td-col--bg-green td-col--float"><span class="td-col__number">900</span><span class="td-col__per td-col__per--green">+10%</span></td>
+          </tr>
+          <tr>
+            <td class="td-col td-col--1 td-col--text-left">Удаления из счёта (до оплаты), руб</td>
+            <td class="td-col td-col--small td-col--bg-blue">1300</td>
+            <td class="td-col td-col--float"><span class="td-col__number">1300</span><span class="td-col__per td-col__per--red">-7%</span></td>
+            <td class="td-col td-col--bg-green td-col--float"><span class="td-col__number">900</span><span class="td-col__per td-col__per--green">+30%</span></td>
+          </tr>
+          <tr>
+            <td class="td-col td-col--1 td-col--text-left">Количество чеков</td>
+            <td class="td-col td-col--small td-col--bg-blue">34</td>
+            <td class="td-col td-col--float"><span class="td-col__number">36</span><span class="td-col__per td-col__per--red">-5%</span></td>
+            <td class="td-col td-col--float"><span class="td-col__number">34</span><span class="td-col__per td-col__per--red">-5%</span></td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

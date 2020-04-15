@@ -1566,14 +1566,14 @@ body.compensate-for-scrollbar {
   font-family: 'Bebas';
   font-style: normal;
   font-weight: 400;
-  src: local('Bebas Regular'), local('BebasRegular'), url('../../fonts/bebasneueregular.woff2') format('woff2'), url('../../fonts/bebasneueregular.woff') format('woff'), url('../../fonts/bebasneueregular.ttf') format('truetype');
+  src: local('Bebas Regular'), local('BebasRegular'), url('../fonts/bebasneueregular.woff2') format('woff2'), url('../fonts/bebasneueregular.woff') format('woff'), url('../fonts/bebasneueregular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Bebas';
   font-style: bold;
   font-weight: 700;
-  src: local('Bebas Bold'), local('BebasBold'), url('../../fonts/bebasneuebold.woff2') format('woff2'), url('../../fonts/bebasneuebold.woff') format('woff'), url('../../fonts/bebasneuebold.ttf') format('truetype');
+  src: local('Bebas Bold'), local('BebasBold'), url('../fonts/bebasneuebold.woff2') format('woff2'), url('../fonts/bebasneuebold.woff') format('woff'), url('../fonts/bebasneuebold.ttf') format('truetype');
 }
 
 * {
